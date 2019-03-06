@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.hanish.bmianalysis.MainActivity">
+
+    <TextView
+        android:id="@+id/tvTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text=" degree C" />
+
+    <TextView
+        android:id="@+id/tvLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvTemp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Fetching Location..." />
+
+    <TextView
+        android:id="@+id/tvMName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvLocation"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:text=""
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/tvHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvMName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:text="Height" />
+
+    <TextView
+        android:id="@+id/tvFeet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/spnFt"
+        android:layout_alignBottom="@+id/spnFt"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Feet" />
+
+    <TextView
+        android:id="@+id/tvInch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/spnInch"
+        android:layout_toEndOf="@+id/tvHeight"
+        android:layout_toRightOf="@+id/tvHeight"
+        android:text="Inch" />
+
+    <Spinner
+        android:id="@+id/spnFt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvHeight"
+        android:layout_marginTop="13dp"
+        android:layout_toLeftOf="@+id/tvHeight"
+        android:layout_toStartOf="@+id/tvHeight" />
+
+    <Spinner
+        android:id="@+id/spnInch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/spnFt"
+        android:layout_alignBottom="@+id/spnFt"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:id="@+id/tvWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvInch"
+        android:layout_marginTop="74dp"
+        android:layout_toEndOf="@+id/spnFt"
+        android:layout_toRightOf="@+id/spnFt"
+        android:text="Weight" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabCall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:clickable="true"
+        app:backgroundTint="#000000"
+        app:fabSize="mini"
+        app:srcCompat="@android:drawable/ic_menu_call" />
+
+    <Button
+        android:id="@+id/btnSsave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fabCall"
+        android:layout_marginBottom="26dp"
+        android:layout_toLeftOf="@+id/tvWeight"
+        android:layout_toStartOf="@+id/tvWeight"
+        android:text="Calculate" />
+
+    <Button
+        android:id="@+id/btnHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnSsave"
+        android:layout_toEndOf="@+id/tvWeight"
+        android:layout_toRightOf="@+id/tvWeight"
+        android:text="History" />
+
+    <EditText
+        android:id="@+id/etWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnSsave"
+        android:layout_alignStart="@+id/btnSsave"
+        android:layout_below="@+id/tvWeight"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:gravity="left"
+        android:hint="Enter Weight"
+        android:inputType="numberDecimal" />
+
+
+</RelativeLayout>
